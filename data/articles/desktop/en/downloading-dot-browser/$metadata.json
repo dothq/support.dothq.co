@@ -1,0 +1,23 @@
+{
+    "$_LOCKED_": false,
+    "id": "downloading-dot-browser",
+    "name": "Downloading Dot Browser",
+
+    "aliases": [
+        "browser-download",
+        "installing-dot",
+        "installation",
+        "browser-install",
+        "downloading-dot",
+        "how-to-download",
+        "download"
+    ],
+
+    "valid_for": {
+        "operating_systems": [
+            "windows",
+            "macos",
+            "linux"
+        ]
+    }
+}

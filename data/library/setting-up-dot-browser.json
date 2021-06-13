@@ -1,0 +1,13 @@
+[
+    {
+        "name": {
+            "en": "Setting up Dot Browser"
+        },
+        "description": {
+            "en": "Getting you all set up with Dot Browser."
+        },
+        "articles": [
+            "downloading-dot-browser"
+        ]
+    }
+]
