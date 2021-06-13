@@ -1,27 +1,28 @@
 import React from "react";
 import {
-    BrowserRouter as Router,
     Switch,
-    Route,
-    Link
+    Route
 } from "react-router-dom";
+import { Reset } from "styled-reset";
+import { Home } from "../../pages/Home.page";
+import { GlobalStyle } from "../../styles/global";
 
 export const App = () => {
     return (
-        <Switch>
-            <Route path="/" exact>
-                <>
-                    <div></div>
-                    <h2>Welcome to dothq.co</h2>
-                    <Link to={"https://dothq.co/"}>go to dothq.co</Link>
-                    <p>Welcome!</p>
-                </>
-            </Route>
-            <Route path={"*"}>
-                <>
-                    404
-                </>
-            </Route>
-        </Switch>
+        <>
+            <Reset />
+            <GlobalStyle />
+            
+            <Switch>
+                <Route path="/" exact>
+                    <Home />
+                </Route>
+                <Route path={"*"}>
+                    <>
+                        404
+                    </>
+                </Route>
+            </Switch>
+        </>
     )
 }

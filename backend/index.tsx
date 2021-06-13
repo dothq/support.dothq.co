@@ -6,16 +6,32 @@ import { StaticRouter } from "react-router-dom";
 
 import { App } from "../frontend/components/App";
 
+import { resolve } from "path";
+import { ServerStyleSheet } from "styled-components";
+import { Html } from "../shared/components/Html";
+
 const app = express();
 
+app.use("/assets", express.static(resolve(process.cwd(), "assets")))
+
 app.use((req, res, next) => {
-    const markup = renderToString(
+    const sheet = new ServerStyleSheet();
+
+    const markup = renderToString(sheet.collectStyles(
         <StaticRouter context={{ }} location={req.url}>
             <App />
         </StaticRouter>
-    )
+    ));
 
-    res.send(`<div id="mount">${markup}</div>`);
+    const styles = sheet.getStyleTags();
+
+    res.send(
+        Html(
+            "Testing",
+            markup,
+            styles
+        )
+    );
 })
 
 const port = process.env.PORT || 3002;
