@@ -9,12 +9,17 @@ import {
 export const App = () => {
     return (
         <Switch>
-            <Route path="/">
+            <Route path="/" exact>
                 <>
                     <div></div>
                     <h2>Welcome to dothq.co</h2>
                     <Link to={"https://dothq.co/"}>go to dothq.co</Link>
                     <p>Welcome!</p>
+                </>
+            </Route>
+            <Route path={"*"}>
+                <>
+                    404
                 </>
             </Route>
         </Switch>
