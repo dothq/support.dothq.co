@@ -23,8 +23,7 @@ export const Header = ({ style }: { style: any }) => {
                 >
                     <img src={"/assets/open_in_new.svg"}></img>
                     <span style={{ display: "flex", gap: "4px" }}>
-                        Go to 
-                        <u>www.dothq.co</u>
+                        @HEADER_RETURN_TO_MAIN@
                     </span>
                 </a>
             </div>

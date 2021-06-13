@@ -14,9 +14,13 @@ export const MainHero = () => {
                 flex: 1, 
                 alignItems: "center", 
                 color: "white", 
-                paddingTop: "3.5rem" 
+                padding: "0 1.5rem",
+                paddingTop: "3.5rem",
+                textAlign: "center"
             }}>
-                <h1 style={{ marginBottom: "5rem" }}>Welcome to Dot HQ Support</h1>
+                <h1 style={{ marginBottom: "5rem" }}>
+                    @WELCOME_LANDING_MASTHEAD@
+                </h1>
 
                 <Searchbox />
             </div>

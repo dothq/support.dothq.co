@@ -16,6 +16,7 @@ export const GlobalStyle = createGlobalStyle`
 
     html, body {
         font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        opacity: 1 !important;
     }
 
     h1 {
@@ -35,5 +36,9 @@ export const GlobalStyle = createGlobalStyle`
         font-weight: 500;
         font-size: 18px;
         color: inherit;
+    }
+
+    a {
+        text-decoration: none;
     }
 `;

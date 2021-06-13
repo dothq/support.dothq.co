@@ -9,17 +9,35 @@ import { App } from "../frontend/components/App";
 import { resolve } from "path";
 import { ServerStyleSheet } from "styled-components";
 import { Html } from "../shared/components/Html";
+import { l10n } from "../shared/l10n";
 
 const app = express();
 
 app.use("/assets", express.static(resolve(process.cwd(), "assets")))
 
-app.use((req, res, next) => {
+app.use((req: any, res, next) => {
+    const lang = req.acceptsLanguages()[0];
+    req.lang = l10n.AVAILABLE_LANGUAGES.find(l => l.startsWith(lang));
+
+    next();
+});
+
+app.get("/", (req: express.Request, res: express.Response) => {
+    const lang = req.acceptsLanguages()[0];
+    if(!lang) return res.redirect("/en-GB");
+
+    const availLang = l10n.AVAILABLE_LANGUAGES.find(l => l.startsWith(lang))
+    if(!availLang) return res.redirect("/en-GB");
+
+    return res.redirect(`/${availLang}`);
+});
+
+app.use("/:lang", (req: any, res, next) => {
     const sheet = new ServerStyleSheet();
 
     const markup = renderToString(sheet.collectStyles(
-        <StaticRouter context={{ }} location={req.url}>
-            <App />
+        <StaticRouter location={req.url}>
+            <App lang={req.lang} />
         </StaticRouter>
     ));
 
@@ -27,9 +45,10 @@ app.use((req, res, next) => {
 
     res.send(
         Html(
-            "Testing",
+            l10n.hydrate("PAGE_TITLE", { lang: req.lang }),
             markup,
-            styles
+            styles,
+            req.lang
         )
     );
 })

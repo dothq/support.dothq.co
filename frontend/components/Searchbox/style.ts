@@ -17,12 +17,13 @@ export const StyledSearchbox = styled.button`
     appearance: none;
     cursor: text;
 
-    transition: 0.15s all;
+    transition: 0.15s all cubic-bezier(.46,.03,.52,.96);
 
     &:focus-within {
         background: white;
         color: black;
         box-shadow: 0px 0px 0px 4px 0px #1662D3;
+        transform: scale(1.05);
     }
 
     & > i {

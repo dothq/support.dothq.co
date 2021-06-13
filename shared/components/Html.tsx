@@ -1,4 +1,25 @@
-export const Html = (title: string, markup: string, style: string) => {
+import { l10n } from "../l10n";
+
+export const Html = (title: string, markup: string, style: string, lang: string) => {
+    const l10nMarkup = markup.replace(
+        /@(([A-Z0-9]+(?:_[A-Z0-9]+)*))(: \[(([a-zA-Z0-9]|([a-zA-Z0-9],)*))+\])?(@)/gm, 
+    (match: string) => {
+        const id = match.replace(/@/g, "");
+        let attrs = {};
+
+        // if(id.charAt(id.length-1) == "]") {
+        //     const openingAttrs = id.split("").findIndex(_ => _ == "[");
+
+        //     const tempAttrs = id.substr(openingAttrs);
+
+        //     if(!tempAttrs.includes(",") && tempAttrs.match(/\[[a-zA-Z0-9]\]/)) {
+
+        //     }
+        // }
+
+        return l10n.hydrate(id, { lang });
+    })
+
     return `
         <!DOCTYPE html>
         <html lang="en">
@@ -10,7 +31,7 @@ export const Html = (title: string, markup: string, style: string) => {
             ${style}
         </head>
         <body>
-            <div id="mount">${markup}</div>
+            <div id="mount">${l10nMarkup}</div>
         </body>
         </html>
     `;
