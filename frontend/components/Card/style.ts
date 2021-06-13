@@ -13,13 +13,21 @@ export const StyledCard = styled.div`
         color: inherit;
     }
 
-    &:hover, &:focus, &:active {
-        box-shadow: inset 0px 0px 0px 3px currentColor, 0px 0px 4px -2px rgba(0, 0, 0, 0.25), 0px 2px 8px 2px rgba(0, 0, 0, 0.1);
-        transform: scale(1.05);
-        cursor: pointer;
-        
-        & > h3 {
-            border-bottom: 2px solid currentColor;
+    @media not (pointer: none) or (pointer: coarse) {
+        &:hover, &:focus, &:active {
+            box-shadow: inset 0px 0px 0px 3px currentColor, 0px 0px 4px -2px rgba(0, 0, 0, 0.25), 0px 2px 8px 2px rgba(0, 0, 0, 0.1);
+            transform: scale(1.05);
+            cursor: pointer;
+            
+            & > h3 {
+                border-bottom: 2px solid currentColor;
+            }
+        }
+    }
+
+    @media (pointer: none) or (pointer: coarse) {
+        &:hover, &:focus, &:active {
+            box-shadow: inset 0px 0px 0px 3px currentColor;
         }
     }
 
