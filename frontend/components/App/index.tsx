@@ -2,6 +2,8 @@ import React from "react";
 
 export const App = () => {
     return (
-        <div>bingus</div>
+        <div id="mount">
+            <div>YO BINGUS</div>
+        </div>
     )
 }

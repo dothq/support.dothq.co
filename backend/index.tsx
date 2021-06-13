@@ -1,13 +1,18 @@
 import express from "express";
 import React from "react";
+
 import { renderToString } from "react-dom/server";
+import { StaticRouter } from "react-router-dom";
+
 import { App } from "../frontend/components/App";
 
 const app = express();
 
 app.use((req, res, next) => {
     const markup = renderToString(
-        <App />
+        <StaticRouter context={{ }} location={req.url}>
+            <App />
+        </StaticRouter>
     )
 
     res.send(markup);
