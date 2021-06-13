@@ -1,0 +1,27 @@
+{
+  "name": "@dothq/support.dothq.co",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "https://github.com/dothq/support.dothq.co",
+  "author": "Dot HQ <contact@dothq.co>",
+  "license": "MPL-2.0",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/backend"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router": "^5.2.0",
+    "styled-components": "^5.3.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.12",
+    "@types/react": "^17.0.11",
+    "@types/react-dom": "^17.0.7",
+    "@types/styled-components": "^5.1.10",
+    "typescript": "^4.3.2"
+  }
+}
