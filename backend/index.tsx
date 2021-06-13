@@ -15,7 +15,7 @@ app.use((req, res, next) => {
         </StaticRouter>
     )
 
-    res.send(markup);
+    res.send(`<div id="mount">${markup}</div>`);
 })
 
 const port = process.env.PORT || 3002;
