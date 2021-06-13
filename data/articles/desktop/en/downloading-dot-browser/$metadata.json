@@ -1,7 +1,7 @@
 {
     "$_LOCKED_": false,
     "id": "downloading-dot-browser",
-    "name": "Downloading Dot Browser",
+    "title": "Downloading Dot Browser",
 
     "aliases": [
         "browser-download",
