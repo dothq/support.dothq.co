@@ -9,16 +9,12 @@ import {
 export const App = () => {
     return (
         <Switch>
-            <Route path="/bingus">
-                <>
-                    <div>YO BINGUS</div>
-                    <Link to={"/"}>HOME</Link>
-                </>
-            </Route>
             <Route path="/">
                 <>
-                    <div>home</div>
-                    <Link to={"/bingus"}>go to bingus</Link>
+                    <div></div>
+                    <h2>Welcome to dothq.co</h2>
+                    <Link to={"https://dothq.co/"}>go to dothq.co</Link>
+                    <p>Welcome!</p>
                 </>
             </Route>
         </Switch>
