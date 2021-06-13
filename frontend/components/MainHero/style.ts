@@ -9,4 +9,6 @@ export const StyledMainHero = styled.section`
         url(/assets/noise.png) repeat, 
         url(/assets/rainbow.png);
     background-size: cover, cover, cover;
+    display: flex;
+    flex-direction: column;
 `;
