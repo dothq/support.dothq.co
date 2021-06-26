@@ -9,14 +9,12 @@ font-size: 1rem;
 padding: 10px;
 `;
 
-export const Footer = ({ style }: { style: any }) => {
+export const Footer = () => {
     return (
-            <div>
                     <Wrapper>
                     <span>
                     © 2021 Dot HQ. All rights reserved.
                     </span>
                     </Wrapper>
-            </div>
     )
 }
