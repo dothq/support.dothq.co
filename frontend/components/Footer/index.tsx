@@ -6,7 +6,7 @@ font-family: Helvetica;
 background-color: black;
 color: white;
 font-size: 1rem;
-padding: 10px;
+padding: 15px;
 `;
 
 export const Footer = () => {
