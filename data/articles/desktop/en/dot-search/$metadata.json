@@ -1,0 +1,23 @@
+{
+    "$_LOCKED_": false,
+    "id": "dot-search",
+    "title": "What is Dot Search",
+
+    "aliases": [
+        "browser-download",
+        "installing-dot",
+        "installation",
+        "browser-install",
+        "downloading-dot",
+        "how-to-download",
+        "download"
+    ],
+
+    "valid_for": {
+        "operating_systems": [
+            "windows",
+            "macos",
+            "linux"
+        ]
+    }
+}
