@@ -8,7 +8,7 @@ export interface Contract {
     },
 
     markets: {
-        operating_systems: ['windows' | 'macos' | 'linux']
+        operating_systems: ['windows' | 'macos' | 'linux' | 'multi-platform']
     },
 
     permissions: string[]

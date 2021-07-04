@@ -6,6 +6,6 @@ export interface Metadata {
     aliases: string[],
 
     valid_for: {
-        operating_systems: [ "windows" | "macos" | "linux"]
+        operating_systems: [ "windows" | "macos" | "linux" | "multi-platform"]
     }
 }
